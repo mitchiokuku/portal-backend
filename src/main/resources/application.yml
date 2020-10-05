@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      database: ekooko_db_dev
+      authentication-database: admin
+      username: root
+      password: rootpassword
+      port: 27017
+      host: localhost
