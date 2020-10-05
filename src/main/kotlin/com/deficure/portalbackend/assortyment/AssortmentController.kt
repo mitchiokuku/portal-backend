@@ -9,15 +9,15 @@ import reactor.core.publisher.Mono
 class AssortmentController(val assortmentRepository: AssortmentRepository) {
 
 
-    @GetMapping("/assortment")
+    @GetMapping("/assortments")
     fun getAll() : Flux<Assortment> =
             assortmentRepository.findAll()
 
-    @GetMapping("/assortment/{id}")
+    @GetMapping("/assortments/{id}")
     fun get(@PathVariable("id") id: String): Mono<Assortment> =
             assortmentRepository.findById(id)
 
-    @PostMapping(path = arrayOf("/assortment"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    @PostMapping(path = arrayOf("/assortments"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun saveNew(@RequestBody assortment: Assortment) : Mono<Assortment> =
             assortmentRepository.save(assortment)
 

@@ -22,6 +22,8 @@ data class Supplier(@Id var id: String?,
                     val availabilityInDays: String = "1111100",
                     val workingHours: String = "9.00 - 17.00",
                     val verified: Boolean = false,
+                    val shipment : Boolean = false,
+                    val bankAccount: String?,
                     val status: SupplierStatus = SupplierStatus.NEW,
                     val rating: Int = 0)
 

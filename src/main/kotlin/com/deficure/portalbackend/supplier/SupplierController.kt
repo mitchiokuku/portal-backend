@@ -8,16 +8,15 @@ import reactor.core.publisher.Mono
 @RestController
 class SupplierController(val supplierRepository: SupplierRepository) {
 
-
-    @GetMapping("/supplier")
+    @GetMapping("/suppliers")
     fun getAll() : Flux<Supplier> =
             supplierRepository.findAll()
 
-    @GetMapping("/supplier/{id}")
+    @GetMapping("/suppliers/{id}")
     fun get(@PathVariable("id") id: String): Mono<Supplier> =
             supplierRepository.findById(id)
 
-    @PostMapping(path = arrayOf("/supplier"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    @PostMapping(path = arrayOf("/suppliers"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun saveNew(@RequestBody supplier: Supplier) : Mono<Supplier> =
             supplierRepository.save(supplier)
 

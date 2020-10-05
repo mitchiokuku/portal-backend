@@ -9,15 +9,15 @@ import reactor.core.publisher.Mono
 class CustomerController(val customerRepository: CustomerRepository) {
 
 
-    @GetMapping("/customer")
+    @GetMapping("/customers")
     fun getAll() : Flux<Customer> =
             customerRepository.findAll()
 
-    @GetMapping("/customer/{id}")
+    @GetMapping("/customers/{id}")
     fun get(@PathVariable("id") id: String): Mono<Customer> =
             customerRepository.findById(id)
 
-    @PostMapping(path = arrayOf("/customer"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    @PostMapping(path = arrayOf("/customers"), consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
     fun saveNew(@RequestBody customer: Customer) : Mono<Customer> =
             customerRepository.save(customer)
 
