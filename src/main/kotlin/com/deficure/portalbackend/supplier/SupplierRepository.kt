@@ -1,4 +1,4 @@
-package pl.deficure.portalbackend.supplier
+package com.deficure.portalbackend.supplier
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository
 
