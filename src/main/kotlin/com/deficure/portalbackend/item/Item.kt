@@ -9,17 +9,9 @@ data class Item(@Id var id: String?,
                 val name: String,
                 val quantity: Int,
                 val unitOfMeasure: String,
-                val assortment: Assortment,
-                val countryCode: String,
-                val city: String,
-                val postalCode: String,
-                val street: String,
-                val buildingNr: String,
-                val mapCoordinates: String,
-                val contactPhone: String,
-                val email: String,
-                val status: CustomerStatus)
+                val assortment: Assortment?,
+                val status: ItemStatus = ItemStatus.ACTIVE)
 
-enum class CustomerStatus {
-    NEW, ACTIVE, NOT_ACTIVE, REMOVED
+enum class ItemStatus {
+    ACTIVE, UNAVAILABLE, REMOVED
 }

@@ -9,11 +9,11 @@ import reactor.core.publisher.Mono
 class SupplierController(val supplierRepository: SupplierRepository) {
 
 
-    @GetMapping("/supplier", consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    @GetMapping("/supplier")
     fun getAll() : Flux<Supplier> =
             supplierRepository.findAll()
 
-    @GetMapping("/supplier/{id}", consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE))
+    @GetMapping("/supplier/{id}")
     fun get(@PathVariable("id") id: String): Mono<Supplier> =
             supplierRepository.findById(id)
 
