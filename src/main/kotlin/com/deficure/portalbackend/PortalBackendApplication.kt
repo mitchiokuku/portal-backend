@@ -1,4 +1,4 @@
-package pl.deficure.portalbackend
+package com.deficure.portalbackend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
