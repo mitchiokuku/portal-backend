@@ -16,7 +16,7 @@ data class Customer(@Id var id: String?,
                     val buildingNr: String?,
                     val contactPhone: String?,
                     val email: String,
-                    val created: LocalDateTime,
+                    val created: LocalDateTime = LocalDateTime.now(),
                     val status: CustomerStatus = CustomerStatus.NEW)
 
 enum class CustomerStatus {

@@ -9,7 +9,7 @@ import java.time.LocalDateTime
 data class Category(@Id var id: String?,
                     val name: String,
                     val parentCategoryId: String?,
-                    val created: LocalDateTime,
+                    val created: LocalDateTime = LocalDateTime.now(),
                     val status: CategoryStatus = CategoryStatus.ACTIVE)
 
 enum class CategoryStatus {

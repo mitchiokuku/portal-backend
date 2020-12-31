@@ -2,6 +2,7 @@ package com.deficure.portalbackend.supplier
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.LocalDateTime
 
 
 @Document
@@ -25,6 +26,7 @@ data class Supplier(@Id var id: String?,
                     val shipment : Boolean = false,
                     val bankAccount: String?,
                     val status: SupplierStatus = SupplierStatus.NEW,
+                    val created: LocalDateTime = LocalDateTime.now(),
                     val rating: Int = 0)
 
 enum class SupplierType {

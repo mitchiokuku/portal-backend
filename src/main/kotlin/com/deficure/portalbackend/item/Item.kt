@@ -17,7 +17,7 @@ data class Item(@Id var id: String?,
                 val unitOfMeasure: String,
                 val price: BigDecimal = BigDecimal.ZERO,
                 val assortment: Assortment?,
-                val created: LocalDateTime,
+                val created: LocalDateTime = LocalDateTime.now(),
                 val status: ItemStatus = ItemStatus.ACTIVE)
 
 enum class ItemStatus {
