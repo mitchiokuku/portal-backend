@@ -2,6 +2,7 @@ package com.deficure.portalbackend.customer
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.LocalDateTime
 
 @Document
 data class Customer(@Id var id: String?,
@@ -15,6 +16,7 @@ data class Customer(@Id var id: String?,
                     val buildingNr: String?,
                     val contactPhone: String?,
                     val email: String,
+                    val created: LocalDateTime,
                     val status: CustomerStatus = CustomerStatus.NEW)
 
 enum class CustomerStatus {
