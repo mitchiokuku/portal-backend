@@ -11,6 +11,12 @@ Reactive (non-blocking) Flux/Mono Interface
 
 # Instalacja i start API
 
+Baza danych MongoDB
+Należy zainstalowąć Docker oraz Docker Compose.
+Aby Wystartować lokalny proces MongoDB należy użyć pliku docker-compose oraz skryptu start.sh.
+
+
+
 
 English:
 Backend for WEB client systems and Mobile Application.
