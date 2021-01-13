@@ -6,7 +6,7 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @RestController
-@RequestMapping("/api/rest")
+@RequestMapping("/api/rest/v1")
 class CustomerController(val customerRepository: CustomerRepository) {
 
 
